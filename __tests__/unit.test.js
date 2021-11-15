@@ -25,20 +25,20 @@ describe("tests for isPhoneNumber",() => {
 
 //test for: isEmail
 describe("tests for isEmail",() => {
-    test('test phone number',() => {
+    test('test email',() => {
         expect(functions.isEmail('test@gmail.com')).toBe(true);
     })
 
-    test('test phone number',() => {
+    test('test email',() => {
         expect(functions.isEmail('test@ucsd.edu')).toBe(true);
     })
 
-    test('test phone number',() => {
-        expect(functions.isEmail('test@gmail.ocm')).toBe(false);
+    test('test email',() => {
+        expect(functions.isEmail('test@.ocm')).toBe(false);
     })
 
-    test('test phone number',() => {
-        expect(functions.isEmail('test')).toBe(false);
+    test('test email',() => {
+        expect(functions.isEmail('@@@@@@')).toBe(false);
     })
 })
  
@@ -54,11 +54,11 @@ describe("tests for isStrongPassword",() => {
     })
 
     test('test password',() => {
-        expect(functions.isStrongPassword('test123')).toBe(false);
+        expect(functions.isStrongPassword('12345678')).toBe(false);
     })
 
     test('test password',() => {
-        expect(functions.isStrongPassword('test')).toBe(false);
+        expect(functions.isStrongPassword('111111111')).toBe(false);
     })
 })
 
