@@ -82,3 +82,22 @@ describe("tests for isDate",() => {
     })
 })
 
+//test for: isHexColor
+describe("tests for isHexColor",() => {
+    test('test hexColor',() => {
+        expect(functions.isHexColor('#123456')).toBe(true);
+    })
+
+    test('test hexColor',() => {
+        expect(functions.isHexColor('#a7e08f')).toBe(true);
+    })
+
+    test('test hexColor',() => {
+        expect(functions.isHexColor('#00000')).toBe(false);
+    })
+
+    test('test hexColor',() => {
+        expect(functions.isHexColor('fffff')).toBe(false);
+    })
+})
+
